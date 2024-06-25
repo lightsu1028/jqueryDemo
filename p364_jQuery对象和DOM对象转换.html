@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery顶级对象和DOM对象相互转换</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+<script>
+
+    // 1.DOM对象，用原生js获取的对象就是DOM对象
+    var div = document.querySelector('div');
+    console.dir(div)
+    // 2.jQuery对象
+    console.dir($('div'))
+    // 3.dom对象转换jQuery对象
+    // $(div).hide()
+
+    /*  
+        4.jQuery对象转Dom对象 
+        2种方法： $('div')[index] index为索引号
+                 $('div').get(index) index是索引号
+    
+    */
+    // $('div')[0].style.display = 'none'
+    $('div').get(0).style.display = 'none'
+
+
+</script>
+
+</html>

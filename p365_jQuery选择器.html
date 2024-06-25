@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery选择器</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>我是div</div>
+    <div class="nav">我是nav div</div>
+    <p>我是p</p>
+    <ol>
+        <li>我是ol的li</li>
+        <li>我是ol的li</li>
+        <li>我是ol的li</li>
+        <li>我是ol的li</li>
+    </ol>
+    <ul>
+        <li><a href="#">我是ul的li1</a></li>
+        <li><a href="#">我是ul的li2</a></li>
+        <li><a href="#">我是ul的li3</a></li>
+        <li><a href="#">我是ul的li4</a></li>
+    </ul>
+</body>
+<script>
+    $(function () {
+        // 1.类选择器
+        // console.log($(".nav"));
+        // 2.标签选择器
+        // console.log($("div").get(0));
+        // console.log($("div").get(1));
+        // 3.并集选择器
+        // console.log($("div,p ,li"));
+
+        // 层级选择器
+        // console.log($("ul>li")); // 子代选择器 获取ul下面的儿子层级元素li,注意不会获取孙子层级的元素
+        console.log($("ul li")); // 后代选择器 获取ul下面的所有元素，包括孙子层级的元素
+    })
+</script>
+
+</html>

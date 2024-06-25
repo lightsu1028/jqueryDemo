@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筛选选择器</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>我是ul的li1</li>
+        <li>我是ul的li2</li>
+        <li>我是ul的li3</li>
+        <li>我是ul的li4</li>
+        <li>我是ul的li5</li>
+        <li>我是ul的li6</li>
+        <li>我是ul的li7</li>
+    </ul>
+
+    <ol>
+        <li>我是ol的li1</li>
+        <li>我是ol的li2</li>
+        <li>我是ol的li3</li>
+        <li>我是ol的li4</li>
+        <li>我是ol的li5</li>
+        <li>我是ol的li6</li>
+        <li>我是ol的li7</li>
+    </ol>
+</body>
+<script>
+    $(function () {
+        // 筛选ul下面的第一个li元素
+        // $("ul li:first").css("color", "pink")
+
+        // 筛选ul下面的最后一个li元素
+        // $("ul li:last").css("color", "red")
+
+        // :eq(index) 索引号为2的元素 index从0开始
+        // $("ul li:eq(2)").css("color", "purple")
+
+        // 获取奇数个
+        // $("ul li:even").css("color", "pink")
+
+        // 获取偶数个
+        $("ul li:odd").css("color", "pink")
+
+    })
+</script>
+
+</html>

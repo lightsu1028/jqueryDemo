@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$jQuery顶级对象</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+<script>
+
+    // 1.DOM对象，用原生js获取的对象就是DOM对象
+    var div = document.querySelector('div');
+    console.dir(div)
+    // 2.jQuery对象
+    console.dir($('div'))
+    // 3.jQuery对象只能使用jQuery的方法 DOM对象使用原生js的属性和方法
+    // div.style.display = 'none' // js写法
+    $('div').hide() // jQuery写法
+
+
+</script>
+
+</html>
