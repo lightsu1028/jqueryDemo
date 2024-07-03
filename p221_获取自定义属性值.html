@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取自定义属性值</title>
+</head>
+
+<body>
+    <div id="demo" data-index="12"></div>
+    <script>
+        // 获取元素内置的属性id
+        var div = document.querySelector("#demo")
+        console.log(div.id);
+
+
+        // 获取自定义属性
+        console.log(div.getAttribute('data-index'));
+        // 2种方式都可以
+        console.log(div.dataset.index)
+        console.log(div.dataset['index'])
+
+    </script>
+</body>
+
+</html>
