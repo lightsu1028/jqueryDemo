@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象each方法</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        $(function () {
+            $('div').each(function (i, e) {
+                console.log(e);
+                // e是dom元素 需要转换为jQuery对象
+                $(e).css('color', 'blue')
+            })
+        })
+
+    </script>
+</body>
+
+</html>

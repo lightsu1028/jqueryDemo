@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS删除注册事件</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        var divs = document.querySelectorAll('div')
+        divs[0].onclick = function () {
+            alert('1111');
+            // 删除事件
+            this.onclick = null;
+        }
+
+        // 事件注册方式删除
+        var fn = function () {
+            alert('2222')
+            this.removeEventListener('click', fn)
+        }
+
+        divs[1].addEventListener('click', fn)
+    </script>
+</body>
+
+</html>

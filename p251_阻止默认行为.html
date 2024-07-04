@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阻止事件默认行为</title>
+</head>
+
+<body>
+    <a href="http://www.baidu.com">百度</a>
+    <script>
+        var a = document.querySelector('a')
+        // a.addEventListener('click', function (e) {
+
+        //     e.preventDefault()
+        //     // return false;
+        // })
+        a.onclick = function (e) {
+            // 普通浏览器
+            // e.preventDefault()
+            // ie 678浏览器
+            e.returnValue
+            // 使用return false 没有兼容性问题
+            // return false;
+        }
+    </script>
+</body>
+
+</html>
